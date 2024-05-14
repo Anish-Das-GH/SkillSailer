@@ -71,7 +71,7 @@ export const Home = () => {
         </div>
       </section>
       <section id="aboutpg">
-        <h1>
+        <h1 className="about-title">
           About <span>Us</span>
         </h1>
         <div>

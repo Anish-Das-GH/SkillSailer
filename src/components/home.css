@@ -137,6 +137,17 @@ img {
     margin-top: 10px;
     font-size: 25px;
 }
+#aboutpg {
+    margin: 0 auto;
+    margin-top: 80px ;
+    width: 1350px; /* Adjust width as needed */
+    max-width: 100%; /* Allow width to scale down on smaller screens */
+    padding: 20px;
+    text-align: center;
+  }
+  .about-title {
+    margin-bottom: 30px; /* Adjust the gap size as needed */
+  }
 
 #aboutpg p {
     justify-content: center;
