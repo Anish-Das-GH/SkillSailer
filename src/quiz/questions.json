@@ -1,0 +1,92 @@
+[
+  {
+    "question": "Which technology is primarily responsible for the styling of web pages?",
+    "answerOptions": [
+      { "text": "JavaScript", "isCorrect": false },
+      { "text": "HTML", "isCorrect": false },
+      { "text": "CSS", "isCorrect": true },
+      { "text": "Python", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which part of web development is responsible for handling data storage and retrieval?",
+    "answerOptions": [
+      { "text": "Back-end Development", "isCorrect": true },
+      { "text": "Front-end development", "isCorrect": false },
+      { "text": "Full-stack development", "isCorrect": false },
+      { "text": "Middleware development", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which HTML tag is used to create a hyperlink?",
+    "answerOptions": [
+      { "text": "{a}", "isCorrect": true },
+      { "text": "{link}", "isCorrect": false },
+      { "text": "{h1}", "isCorrect": false },
+      { "text": "{p}", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Identify the one which is used to pass data to components from outside?",
+    "answerOptions": [
+      { "text": "Render", "isCorrect": false },
+      { "text": "setState", "isCorrect": false },
+      { "text": "Props", "isCorrect": true },
+      { "text": "Roof", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which of the following is a popular front-end development framework maintained by Google ?",
+    "answerOptions": [
+      { "text": "React", "isCorrect": false },
+      { "text": "Angular", "isCorrect": true },
+      { "text": "Django", "isCorrect": false },
+      { "text": "Vue.js", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which of the following is used in React.js to increase performance?",
+    "answerOptions": [
+      { "text": "Genuine DOM", "isCorrect": false },
+      { "text": "Original DOM", "isCorrect": false },
+      { "text": "Both A and B", "isCorrect": false },
+      { "text": "Virtual DOM", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "What is Babel?",
+    "answerOptions": [
+      { "text": "JavaScript compiler", "isCorrect": true },
+      { "text": "JavaScript interpreter", "isCorrect": false },
+      { "text": "JavaScript transpiler", "isCorrect": false },
+      { "text": "None of the above", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Identify the command used to create a react app?",
+    "answerOptions": [
+      { "text": "npm install -g create-react-web", "isCorrect": false },
+      { "text": "npm -g create-react-app", "isCorrect": false },
+      { "text": "npm install create-react-app", "isCorrect": true },
+      { "text": "All of the above", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Using which of the following command can prevent default behaviour at in react?",
+    "answerOptions": [
+      { "text": "preventDefault()", "isCorrect": true },
+      { "text": "avoidDefault()", "isCorrect": false },
+      { "text": "revokeDefault()", "isCorrect": false },
+      { "text": "None of the above", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which of the following type of HTML tag is used to define an internal style sheet?",
+    "answerOptions": [
+      { "text": "<script>", "isCorrect": false },
+      { "text": "<link>", "isCorrect": false },
+      { "text": "<class>", "isCorrect": false },
+      { "text": "<style>", "isCorrect": true }
+    ]
+  }
+]

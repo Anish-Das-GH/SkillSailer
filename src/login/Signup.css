@@ -1,0 +1,87 @@
+.signup-container {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 150px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    /* background-color: #ec2c02; */
+    background: #e96443;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #904e95, #e96443);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #904e95, #e96443);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    /* Adjust background color if desired */
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-title {
+    text-align: center;
+    margin-bottom: 20px;
+    /* Option 1: Set a smaller font size directly */
+    font-size: 25px;
+    /* Adjust as desired */
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputGroup {
+    margin-bottom: 15px;
+    /* Option 2: Set a smaller font size for specific elements */
+    font-size: 13px;
+    /* Adjust as desired */
+}
+
+.label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    /* Option 2 (continued): Can also set font size here for labels */
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #305277;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: #dc3545;
+    margin-bottom: 10px;
+    /* Option 2 (continued): Can also set font size here for error messages */
+}
+
+.link-container {
+    text-align: center;
+}
+
+.link-container a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: medium;
+    /* Adjust as desired (consider using em) */
+}
+
+.link-container a:hover {
+    text-decoration: underline;
+}
