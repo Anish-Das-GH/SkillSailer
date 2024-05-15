@@ -33,4 +33,4 @@ Technologies Used
 React Js\
 Natural Language Processing\
 Firebase\
-FastAPI\
+FastAPI

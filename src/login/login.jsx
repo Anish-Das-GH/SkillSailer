@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./firebase"; // Assuming firebase.js is in the same directory
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { Signup } from "./Signup";
 import "./login.css";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const navigate = useNavigate(); // Use useNavigate for redirection
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,8 +25,8 @@ export const Login = () => {
       );
       // User is successfully logged in
       console.log("User logged in:", userCredential.user);
-      alert("Login successful!"); // Display success message
-      // Optionally, redirect to another page after successful login
+      localStorage.setItem("isLoggedIn", true); // Store login state (replace with secure storage like cookies for production)
+      navigate("/dashboard"); // Redirect to dashboard on success
     } catch (error) {
       console.error("Login failed:", error);
 
@@ -54,7 +55,7 @@ export const Login = () => {
           errorMessage = "An error occurred. Please try again.";
       }
 
-      alert(errorMessage);
+      setError(errorMessage);
     }
   };
 
