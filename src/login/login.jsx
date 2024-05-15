@@ -8,14 +8,10 @@ import "./login.css";
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(null);
   const navigate = useNavigate(); // Use useNavigate for redirection
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Clear any previous errors
-    setError(null);
 
     try {
       const userCredential = await signInWithEmailAndPassword(
@@ -23,6 +19,7 @@ export const Login = () => {
         email,
         password
       );
+
       // User is successfully logged in
       console.log("User logged in:", userCredential.user);
       localStorage.setItem("isLoggedIn", true); // Store login state (replace with secure storage like cookies for production)
@@ -55,7 +52,7 @@ export const Login = () => {
           errorMessage = "An error occurred. Please try again.";
       }
 
-      setError(errorMessage);
+      alert(errorMessage); // Display error message using alert
     }
   };
 
@@ -91,7 +88,6 @@ export const Login = () => {
             className="login-input"
           />
         </div>
-        {error && <div className="error-message">{error}</div>}
         <button type="submit" className="login-button">
           Login
         </button>
