@@ -1,10 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import SkillSailer from "../assets/SkillSailer.png";
-import "./dashboard.css"
-import user from "./user.png"
-export const Dashboard = () => {
+import SkillSailer from "./assets/SkillSailer.png";
+import user from "./dashboard/user.png";
+import "./dashboard/dashboard.css"
+
+const StreamlitEmbed = () => {
+  return (
+    <iframe
+      title="Streamlit App"
+      src="http://localhost:8501"
+      width="100%"
+      height="800px"
+      style={{ border: "none" }}
+    ></iframe>
+  );
+};
+
+const Dashboard = () => {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(
     localStorage.getItem("isLoggedIn") || false // Check if logged in on load
@@ -12,7 +25,7 @@ export const Dashboard = () => {
   const [username, setUsername] = useState(""); // State to store username
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for menu visibility
   const auth = getAuth(); // Get Firebase auth instance
-  
+
   useEffect(() => {
     // Check for user login state on component mount and redirect if not logged in
     if (!isLoggedIn) {
@@ -52,14 +65,21 @@ export const Dashboard = () => {
               <div className="navcom">
                 <ul>
                   <li>
-                    <span className="username-greeting"><img src={user} alt="" />{username}</span> {/* Username Greeting */}
-                    <button onClick={handleLogout} style={{ marginLeft: "1rem" }}>Logout</button> {/* Logout Button with margin */}
+                    <span className="username-greeting">
+                      <img src={user} alt="" />
+                      {username}
+                    </span>{" "}
+                    {/* Username Greeting */}
+                    <button onClick={handleLogout} style={{ marginLeft: "1rem" }}>
+                      Logout
+                    </button>{" "}
+                    {/* Logout Button with margin */}
                   </li>
                 </ul>
               </div>
             </div>
           </section>
-          
+          <StreamlitEmbed />
         </>
       ) : (
         <p>You are not logged in. Please log in to access the dashboard.</p>
@@ -67,3 +87,5 @@ export const Dashboard = () => {
     </div>
   );
 };
+
+export default Dashboard;
