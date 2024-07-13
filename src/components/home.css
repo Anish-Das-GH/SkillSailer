@@ -326,3 +326,49 @@ textarea {
     font-size: 2.4rem;
     color: #fff;
 }
+
+/* Styles for the navcom container when user is logged in */
+.navcom {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding as needed */
+    color: black; /* Text color */
+}
+
+.username-greeting {
+    display: flex;
+    align-items: center;
+    color: black; /* Text color */
+}
+
+.username-greeting img {
+    margin-right: 10px; /* Space between icon and username */
+    width: 40px; /* Adjust icon size as needed */
+    height: 40px;
+    
+    border-radius: 50%; /* Make icon circular */
+    background-color: #ffffff; /* Background color of the icon */
+    padding: 5px; /* Adjust padding around the icon */
+    vertical-align: middle; /* Vertically align the icon */
+}
+
+.username-greeting span {
+    font-size: 18px; /* Adjust font size as needed */
+    vertical-align: middle; /* Vertically align the text */
+}
+
+.logout-button {
+    margin-left: 20px; /* Space between username and logout button */
+    background-color: #ec2c02; /* Background color of the button */
+    color: white; /* Text color */
+    border-radius: 20px; /* Rounded corners */
+    padding: 5px 10px; /* Adjust padding as needed */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f; /* Background color on hover */
+    color: white; /* Text color on hover */
+}
+

@@ -1,9 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../components/home.css";
 import SkillSailer from "../assets/SkillSailer.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import study from "../assets/study.jpg";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import userIcon from "../dashboard/user.png"; // Import user icon
+
 export const Home = () => {
+  const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    localStorage.getItem("isLoggedIn") || false
+  );
+  const [username, setUsername] = useState(""); // State to store username
+  const auth = getAuth(); // Get Firebase auth instance
+
+  useEffect(() => {
+    if (isLoggedIn) {
+      const unsubscribe = onAuthStateChanged(auth, (user) => {
+        if (user) {
+          const email = user.email; // Assuming username is stored in email
+          setUsername(email.split("@")[0]); // Extract username from email (adjust based on your data)
+        }
+      });
+      return unsubscribe; // Cleanup function to prevent memory leaks
+    }
+  }, [isLoggedIn, auth]);
+
+  const handleLogout = () => {
+    localStorage.removeItem("isLoggedIn"); // Clear login state
+    navigate("/login"); // Redirect to login on logout
+  };
+
   return (
     <>
       <link
@@ -21,25 +48,35 @@ export const Home = () => {
           <ul>
             <li>
               <a href="#navi">
-                <strong>Home</strong>{" "}
+                <strong>Home</strong>
               </a>
             </li>
             <li>
               <a href="#aboutpg">
-                <strong>About</strong>{" "}
+                <strong>About</strong>
               </a>
             </li>
             <li>
               <a href="#confo">
-                {" "}
-                <strong>Contact</strong>{" "}
+                <strong>Contact</strong>
               </a>
             </li>
           </ul>
         </div>
         <div className="nav-button">
-          <div className="anim-layer" />
-          <Link to="/Login">Login / Sign Up</Link>
+          {isLoggedIn ? (
+            <div className="navcom">
+              <span className="username-greeting">
+                <img src={userIcon} alt="user" />
+                {username}
+              </span>
+              <button className="logout-button" onClick={handleLogout}>
+                Logout
+              </button>
+            </div>
+          ) : (
+            <Link to="/Login">Login / Sign Up</Link>
+          )}
         </div>
       </div>
       <section>
@@ -77,7 +114,6 @@ export const Home = () => {
         <div>
           <h3>Our Objective</h3>
           <br></br>
-
           <p>
             The objective of SkillSailer is to revolutionize the recruitment
             process by leveraging advanced technologies such as machine learning
@@ -91,7 +127,6 @@ export const Home = () => {
             decision-making by recruiters and hiring managers.
           </p>
           <br></br>
-
           <h3>Why Choose SkillSailer?</h3>
           <br></br>
           <p>
