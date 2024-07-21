@@ -23,8 +23,8 @@ A website that serves as a comprehensive platform for job seekers and recruiters
 **Approach**
 **Data Collection:**
 
-1.Resume Upload: Users upload their resumes through the web application. The resumes can be in various formats such as PDF, DOC, or DOCX.
-2.Keyword Extraction: The uploaded resumes are processed to extract text content. Using libraries like Py2pdf, relevant keywords and skills are identified from the text.
+1. Resume Upload: Users upload their resumes through the web application. The resumes can be in various formats such as PDF, DOC, or DOCX.
+2. Keyword Extraction: The uploaded resumes are processed to extract text content. Using libraries like Py2pdf, relevant keywords and skills are identified from the text.
 
 **Data Processing:**
 
@@ -42,4 +42,4 @@ React Js\
 Python\
 streamlit\
 Firebase\
-Gemini API\
+Gemini API
