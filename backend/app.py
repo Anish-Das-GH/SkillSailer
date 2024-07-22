@@ -4,7 +4,7 @@ import google.generativeai as genai
 import PyPDF2 as pdf
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
+
 load_dotenv()
 
 # Get the API key from the environment variable
