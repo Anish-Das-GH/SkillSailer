@@ -1,8 +1,17 @@
+import os
 import streamlit as st
 import google.generativeai as genai
 import PyPDF2 as pdf
+from dotenv import load_dotenv
 
-genai.configure(api_key="AIzaSyCTN1LNVGR_2zmCp4CAJUjAoAFd8-Rli80")
+# Load environment variables from .env file
+load_dotenv()
+
+# Get the API key from the environment variable
+api_key = os.getenv('GOOGLE_API_KEY')
+
+# Configure the API key for the generative AI
+genai.configure(api_key=api_key)
 
 def get_gemini_response(input):
     model = genai.GenerativeModel('gemini-pro')
@@ -19,12 +28,12 @@ def input_pdf_text(uploaded_file):
 
 # Prompt Template
 input_prompt_template = """
-Hey Act Like a skilled or very experience ATS(Application Tracking System)
+Hey Act Like a skilled or very experienced ATS(Application Tracking System)
 with a deep understanding of tech field of {jd}. Your task is to evaluate the resume based on the given job description.
 You must consider the job market is very competitive and you should provide 
 best assistance for improving their resumes. Assign the percentage Matching based 
-on {jd} and the missing keywords with high accuracy.Be honest with the score, even if the score gets 0% match.
-Also say if i am unfit for the job and suggest a better alternative job role based on my technical skills.
+on {jd} and the missing keywords with high accuracy. Be honest with the score, even if the score gets 0% match.
+Also say if I am unfit for the job and suggest a better alternative job role based on my technical skills.
 
 resume: {text}
 description: {jd}
@@ -34,7 +43,7 @@ description: {jd}
 st.title("Smart ATS")
 st.text("Improve Your Resume ATS")
 jd = st.text_area("Paste the Job Description")
-uploaded_file = st.file_uploader("Upload Your Resume", type="pdf", help="Please upload the pdf")
+uploaded_file = st.file_uploader("Upload Your Resume", type="pdf", help="Please upload the PDF")
 
 submit = st.button("Submit")
 

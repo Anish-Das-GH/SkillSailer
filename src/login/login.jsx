@@ -23,7 +23,7 @@ export const Login = () => {
       // User is successfully logged in
       console.log("User logged in:", userCredential.user);
       localStorage.setItem("isLoggedIn", true); // Store login state (replace with secure storage like cookies for production)
-      navigate("/"); // Redirect to dashboard on success
+      navigate("/scanner"); // Redirect to dashboard on success
     } catch (error) {
       console.error("Login failed:", error);
 
