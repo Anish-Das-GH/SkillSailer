@@ -90,8 +90,10 @@ export const Home = () => {
                   SkillSailer
                 </h1>
                 <p>
-                  Empowering students to discover their ideal career paths and
-                  connecting them with companies actively seeking their skills.
+                  A comprehensive platform for job seekers and recruiters,
+                  facilitating streamlined recruitment processes. It features
+                  personalized job recommendations, detailed candidate profiles
+                  powered by AI.
                 </p>
               </div>
               <div className="main_image">
@@ -115,28 +117,29 @@ export const Home = () => {
           <h3>Our Objective</h3>
           <br></br>
           <p>
-            The objective of SkillSailer is to revolutionize the recruitment
-            process by leveraging advanced technologies such as machine learning
-            and natural language processing to provide personalized job
-            recommendations and accurately assess the true potential of each
-            candidate. By analyzing candidate data, including resumes, skills
-            assessments, and performance evaluations, the solution aims to match
-            candidates with suitable job openings based on their skills,
-            experiences, and preferences. Additionally, it seeks to create
-            comprehensive profiles for each candidate to facilitate better
-            decision-making by recruiters and hiring managers.
+            The objective of our platform is to revolutionize the recruitment
+            process by leveraging the power of artificial intelligence (AI) to
+            provide personalized job recommendations and accurately assess the
+            true potential of each candidate. By analyzing candidate data,
+            including resumes the solution aims to match candidates with
+            suitable job openings based on their skills, experiences, and
+            preferences. Additionally, it seeks to create comprehensive profiles
+            for each candidate to facilitate better decision-making by
+            recruiters and hiring managers.
           </p>
           <br></br>
           <h3>Why Choose SkillSailer?</h3>
           <br></br>
           <p>
-            SkillSailer is a website that serves as a comprehensive platform for
-            job seekers and recruiters, facilitating streamlined recruitment
-            processes. It features personalized job recommendations, detailed
-            candidate profiles, and robust skills assessment tools powered by AI
-            and machine learning. With a user-friendly interface and emphasis on
-            data privacy, the website optimizes the recruitment experience for
-            both the parties.
+            In today's job market, aligning skills with opportunities is
+            challenging. Existing platforms often fail to accurately assess
+            candidates or match them with suitable roles. Job seekers struggle
+            to find positions that fully utilize their skills, while employers
+            face difficulties identifying the best-fit candidates. Our platform
+            leverages AI to bridge this gap, empowering both job seekers and
+            employers to make informed decisions and achieve successful
+            outcomes. Choose us for a comprehensive solution that enhances your
+            career and hiring processes.
           </p>
         </div>
       </section>
