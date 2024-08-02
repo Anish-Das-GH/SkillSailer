@@ -67,7 +67,7 @@ Gemini API
 8. Now you can Create a new account if you do not have any account or just log in. 
 9. Navigate to Analyze your CV Button.
 10. Enter the job Description and upload the CV (It Should be in PDF format).
-11. Click on Submit button. Enter Job Description: Provide the job description for the role you are targeting. Our platform will extract the required information from your CV. The extracted information and the job description you have entered will be sent to the Gemini API.
+11. Click on Submit button.Provide the job description for the role you are targeting. Our platform will extract the required information from your CV. The extracted information and the job description you have entered will be sent to the Gemini API.
 
 12. The Gemini API will return a score indicating how well your CV matches the job description.You will receive suggestions on how to enhance your CV based on the matching analysis. You will also Get recommendations for alternative job roles that might suit your skills and experience.
 
