@@ -42,6 +42,26 @@ description: {jd}
 st.title("Smart ATS")
 st.text("Improve Your Resume ATS")
 
+# Adding custom CSS to change background and text colors
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background-color: white;
+        color: black;
+    }
+    .sidebar .sidebar-content {
+        background-color: white;
+        color: black;
+    }
+    .widget-label {
+        color: black;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Adding placeholder to the job description text area
 jd = st.text_area("Paste the Job Description", placeholder="Enter the job description")
 
