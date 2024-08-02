@@ -1,148 +1,140 @@
 /* General Styles */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-  }
-
- 
-  .dashboard-container {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-  
-  /* Header Styles */
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #f0f0f0;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-  
-  .header h1 {
-    font-size: 1.5rem;
-    margin: 0;
-  }
-  
-  /* User Info Styles */
-  .user-info {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  .user-logo {
-    width: 30px;
-    height: 30px;
-    margin-right: 1rem;
-    border-radius: 50%;
-  }
-  
-  .username {
-    font-weight: bold;
-  }
-  
-  /* User Menu Styles */
-  .user-menu {
-    position: absolute;
-    top: calc(100% + 5px);
-    right: 0;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    list-style: none;
-    padding: 0;
-  }
-
-
-  /* navbar
-   */
-   .navbar {
-    position: relative;
-    width: 100%;
-    padding: 3px 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: -5px 5px 5px -5px rgba(0, 0, 0, 0.75);
-
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
-.navcom>ul>li {
-    position: relative;
-    display: inline;
-    list-style: none;
-    padding: 10px 20px;
-    
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-img {
-    margin-top: 10px;
-    width: 40%;
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f0f0f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.username-greeting img{
-    width: 30px;
-    height: 30px;
-    margin-right: 1rem;
-    margin-bottom: -10px;
-    margin-right: 6px;
-    
+.header h1 {
+  font-size: 1.5rem;
+  margin: 0;
 }
 
-
-
-
-
-.nav-logo a,
-.nav-button a {
-    color: white;
-    list-style: none;
-    text-decoration: none;
-    display: flex;
+/* User Info Styles */
+.user-info {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
-.nav-logo {
-    font-size: 32px;
-    margin-left: 20px;
+.user-logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 1rem;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
+.username {
+  font-weight: bold;
+}
+
+/* User Menu Styles */
+.user-menu {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  list-style: none;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  position: relative;
+  width: 100%;
+  padding: 3px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: -5px 5px 5px -5px rgba(0, 0, 0, 0.75);
+}
+
+.navcom > ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navcom > ul > li {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.username-greeting img {
+  width: 30px;
+  height: 30px;
+  margin-right: 1rem;
+}
+
+/* Remove background color from nav-button */
 .nav-button {
-    background-color: #ec2c02;
-    border-radius: 50px;
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    cursor: pointer;
-    margin-right: 20px;
+  border-radius: 50px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+  margin-right: 20px;
 }
 
 .anim-layer {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 0;
-    height: 100%;
-    background-color: white;
-    transition: width 0.3s ease, left 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  background-color: white;
+  transition: width 0.3s ease, left 0.3s ease;
 }
 
 .nav-button:hover .anim-layer {
-    width: 100%;
-    left: 0;
-}
-
-.nav-button:hover a {
-    color: #141214;
+  width: 100%;
+  left: 0;
 }
 
 .nav-button a {
-    display: block;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    position: relative;
-    z-index: 1;
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-button:hover a {
+  color: #141214;
+}
+
+/* Styles for the logout button */
+.logout-button {
+  background-color: #ec2c02;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
 }

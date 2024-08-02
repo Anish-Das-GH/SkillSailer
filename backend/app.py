@@ -4,7 +4,6 @@ import google.generativeai as genai
 import PyPDF2 as pdf
 from dotenv import load_dotenv
 
-
 load_dotenv()
 
 # Get the API key from the environment variable
@@ -42,7 +41,10 @@ description: {jd}
 # Streamlit app
 st.title("Smart ATS")
 st.text("Improve Your Resume ATS")
-jd = st.text_area("Paste the Job Description")
+
+# Adding placeholder to the job description text area
+jd = st.text_area("Paste the Job Description", placeholder="Enter the job description")
+
 uploaded_file = st.file_uploader("Upload Your Resume", type="pdf", help="Please upload the PDF")
 
 submit = st.button("Submit")

@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import SkillSailer from "./assets/SkillSailer.png";
 import user from "./dashboard/user.png";
-import "./dashboard/dashboard.css"
+import "./dashboard/dashboard.css";
+import { Link } from "react-router-dom";
 
 const StreamlitEmbed = () => {
   return (
@@ -60,20 +61,23 @@ const Dashboard = () => {
           <section>
             <div className="navbar" id="navi">
               <div className="nav-logo">
-                <img src={SkillSailer} alt="img" />
+                
+              <Link to="/">
+                  <img src={SkillSailer} alt="SkillSailer Logo" />
+                </Link>
               </div>
               <div className="navcom">
                 <ul>
-                  <li>
-                    <span className="username-greeting">
-                      <img src={user} alt="" />
-                      {username}
-                    </span>{" "}
-                    {/* Username Greeting */}
-                    <button onClick={handleLogout} style={{ marginLeft: "1rem" }}>
+                  <li className="user-info">
+                    <img className="user-logo" src={user} alt="User" />
+                    <span className="username">{username}</span>
+                    <button
+                      className="logout-button"
+                      onClick={handleLogout}
+                      style={{ marginLeft: "1rem" }}
+                    >
                       Logout
-                    </button>{" "}
-                    {/* Logout Button with margin */}
+                    </button>
                   </li>
                 </ul>
               </div>

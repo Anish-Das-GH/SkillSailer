@@ -327,11 +327,21 @@ textarea {
     color: #fff;
 }
 
-/* Styles for the navcom container when user is logged in */
+/* Remove background color from nav-button */
+.nav-button {
+    border-radius: 50px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* Adjust navcom and child elements */
 .navcom {
     display: flex;
     align-items: center;
-    padding: 10px 20px; /* Adjust padding as needed */
+    padding: 10px 20px;
     color: black; /* Text color */
 }
 
@@ -345,16 +355,18 @@ textarea {
     margin-right: 10px; /* Space between icon and username */
     width: 40px; /* Adjust icon size as needed */
     height: 40px;
-    
     border-radius: 50%; /* Make icon circular */
     background-color: #ffffff; /* Background color of the icon */
     padding: 5px; /* Adjust padding around the icon */
-    vertical-align: middle; /* Vertically align the icon */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    display: inline-block;
 }
 
 .username-greeting span {
     font-size: 18px; /* Adjust font size as needed */
     vertical-align: middle; /* Vertically align the text */
+    display: inline-block;
+    line-height: 40px; /* Match the height of the image for vertical alignment */
 }
 
 .logout-button {
@@ -371,4 +383,3 @@ textarea {
     background-color: #d32f2f; /* Background color on hover */
     color: white; /* Text color on hover */
 }
-

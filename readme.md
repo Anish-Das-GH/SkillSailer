@@ -43,3 +43,46 @@ Python\
 streamlit\
 Firebase\
 Gemini API
+
+**Demo**
+1. Open a terminal or command prompt.
+2. Navigate to the `skillsailer` folder where your React project is located:
+   ```bash
+   cd skillsailer
+3. Install the necessary dependencies:
+   ```bash
+   npm install
+4. Start the React Application
+   ```bash
+   npm start
+5. Now for backend Open a new terminal or PowerShell window. Navigate to the backend folder.
+   ```bash
+   cd backend
+6. Ensure you have all required Python packages installed. You can use a virtual environment or install them directly:
+   ```bash
+   pip install -r requirements.txt
+7. Run the backend streamlit app:
+   ```bash
+   streamlit run app.py
+8. Now you can Create a new account if you do not have any account or just log in. 
+9. Navigate to Analyze your CV Button.
+10. Enter the job Description and upload the CV (It Should be in PDF format).
+11. Click on Submit button. Enter Job Description: Provide the job description for the role you are targeting. Our platform will extract the required information from your CV. The extracted information and the job description you have entered will be sent to the Gemini API.
+
+12. The Gemini API will return a score indicating how well your CV matches the job description.You will receive suggestions on how to enhance your CV based on the matching analysis. You will also Get recommendations for alternative job roles that might suit your skills and experience.
+
+***Demo Screenshots :***
+
+Here are some screenshots demonstrating the functionality of the SkillSailer platform:
+
+1. **Homepage**:
+   ![Homepage](demo1.png)
+
+2. **Login Page**:
+   ![Login Page](demo2.png)
+
+3. **Resume Upload**:
+   ![Resume Upload](demo3.png)
+
+4. **Analysis Results**:
+   ![Analysis Results](demo4.png)
